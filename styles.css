@@ -17,7 +17,6 @@
 .container {
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 7fr;
-    grid-template-rows: 1fr 4fr;
     height: 100vh;
 }
 
@@ -26,7 +25,6 @@
     background-color: var(--primary-color);
     grid-row: 1 / 3;
     color: var(--font-white);
-    font-weight: bold;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -124,12 +122,20 @@
 .main {
     background-color: var(--main-bg);
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 4fr 1fr;
+}
+
+.main h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .projects {
-    margin: 10px;
-    grid-row: 1 / 3;
+    margin: 20px;
+}
+
+.projects p {
+    font-size: 1rem;
 }
 
 .projects-container {
@@ -139,36 +145,65 @@
 }
 
 .projects-container .card {
-    height: 10vh;
+    height: 20vh;
 }
 
-.announcements {
-    margin: 10px;
-
+.projects-container .main-cards {
+    display: grid;
+    grid-template-rows: 2rem 1fr 1fr;
 }
 
-.announcements>.card {
-    padding: 2vw;
+.projects-container h3 {
+    font-size: 1.2rem;
+}
+
+.projects-container .main-cards .card-icons {
+    align-self: end;
+    justify-self: end;
+}
+
+.miscellaneous {
+    margin: 20px 20px 0px 0px;
+}
+
+.announcements .texts p {
+    font-size: .8rem;
 }
 
 .trending {
-    margin: 10px;
+    margin-top: 20px;
+}
+.trending .card {
+    display: grid;
+    gap: 10px;
+}
+.trending .card .item {
+    display: grid;
+    grid-template-columns: 50px 1fr
 }
 
-.trending>.card {
-    padding: 2vw;
+.trending .card .item img{
+    width: 40px;
+    grid-row: 1 / 3;
+}
+
+.trending a {
+    color: var(--font-black);
+    text-decoration: none;
 }
 
 .card {
     background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
 }
 
-a {
+.sidebar a {
     color: var(--font-white);
     text-decoration: none;
 }
 
-a:hover {
+.sidebar a:hover {
     color: var(--font-black);
 }
 
@@ -177,6 +212,7 @@ a:hover {
     background-color: var(--main-bg);
     padding: 10px 0px;
     border-radius: 8px;
+    font-weight: bold;
 }
 
 .active-sidebar>a {
@@ -189,7 +225,11 @@ a:hover {
     align-self: center;
 }
 
-button:hover{
+button:hover {
     background-color: var(--main-bg);
     color: var(--font-black);
+}
+
+hr {
+    margin: 15px 0px;
 }
